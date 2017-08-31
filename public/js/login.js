@@ -7,7 +7,8 @@ define(['jquery','cookie'],function($){
       data: $('#loginForm').serialize(), //序列化表单
       dataType:'json',
       //成功回调函数
-      success:function(data){  
+      success:function(data){ 
+        
         //判断是否成功
         if(data.code==200){
         	//存储用户信息cookie，将获取的数据result对象使用JSON.stringify（）

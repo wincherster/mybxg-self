@@ -28,14 +28,16 @@ define(['jquery','cookie'],function($){
 
   //获取cookie,验证是否登录，跳转页面
   var seesionId = $.cookie('PHPSESSID');
+  // console.log($.cookie('PHPSESSID'));
   if(!seesionId && location.pathname != '/main/login'){
     location.href= '/main/login';
   }
 
   // 获取用户登录信息 (转换成对象格式)
-  // var cookie = $.cookie('loginInfo');
-  var loginInfo = JSON.parse($.cookie('loginInfo'));
-  console.log(loginInfo);
+  var cookie = $.cookie('loginInfo');
+  
+  var loginInfo = cookie?JSON.parse(cookie):{};
+  console.log(loginInfo)
   $('.profile img').attr('src',loginInfo.tc_avatar);
   $('.profile h4').html(loginInfo.tc_name);
 });
