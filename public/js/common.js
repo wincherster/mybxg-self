@@ -1,5 +1,5 @@
 //定义封装成模块, 传入$ 符号
-define(['jquery','cookie'],function($){
+define(['jquery','template','cookie'],function($,template){
   // NProgress.start();
   // NProgress.done();
   //控制左侧导航菜单的折叠展开
@@ -38,8 +38,15 @@ define(['jquery','cookie'],function($){
   
   var loginInfo = cookie?JSON.parse(cookie):{};
   console.log(loginInfo)
-  $('.profile img').attr('src',loginInfo.tc_avatar);
-  $('.profile h4').html(loginInfo.tc_name);
+  // $('.profile img').attr('src',loginInfo.tc_avatar);
+  // $('.profile h4').html(loginInfo.tc_name);
+ 
+  var tpl = '<div class="avatar img-circle">'
+            +'<img src="{{tc_avatar}}">'
+            +'</div>'
+            +'<h4>{{tc_name}}</h4>'
+  var html = template.render(tpl,loginInfo);
+  $('#profileId').html(html);
 });
 	
 	
