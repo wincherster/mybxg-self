@@ -37,7 +37,7 @@ define(['jquery','template','cookie'],function($,template){
   var cookie = $.cookie('loginInfo');
   
   var loginInfo = cookie?JSON.parse(cookie):{};
-  console.log(loginInfo)
+  // console.log(loginInfo);
   // $('.profile img').attr('src',loginInfo.tc_avatar);
   // $('.profile h4').html(loginInfo.tc_name);
  
