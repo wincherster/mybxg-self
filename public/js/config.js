@@ -6,8 +6,11 @@ require.config({
   	template : 'artTemplate/template-web',
   	bootstrap : 'bootstrap/js/bootstrap.min',
   	login:'../js/login',
+  	index:'../js/index',
+  	util:'../js/util',
   	common:'../js/common',
-  	teacherlist : '../js/teacher-list'
+  	teacherlist : '../js/teacher-list',
+  	teacheradd : '../js/teacheradd'
   },
   //把非标准模块转换成标准模块
   shim:{  

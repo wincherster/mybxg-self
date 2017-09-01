@@ -1,4 +1,13 @@
-define(['jquery','template','bootstrap'],function($,template){
+define(['jquery','template','util','bootstrap'],function($,template,util){
+	// var pathname = location.pathname;
+	// $('.navs a[href="'+pathname+'"').addClass('active');
+	// 
+	// 设置导航菜单选中
+	util.setMenu(location.pathname);
+	
+	var ret = util.qs('abc');
+	console.log(ret);
+
 	//请求后台结构，获取列表数据
 	$.ajax({
 		type:'get',
