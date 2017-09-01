@@ -12,10 +12,9 @@ define(['jquery','template','bootstrap'],function($,template){
 
 			//绑定预览点击事件
 			$('.preveiw').click(function(){
-				
 				//通过调取后台接口获取数据
 				var tcId = $(this).closest('td').attr('data-tcId');
-				console.log(tcId);
+				// console.log(tcId);
 				$.ajax({
 					type:'get',
 					url:'/api/teacher/view',
@@ -32,6 +31,32 @@ define(['jquery','template','bootstrap'],function($,template){
 
 				})
 			})
+			//启用注销功能
+			$('.eod').click(function(){
+				//在获取一次 tcId
+				var td = $(this).closest('td');
+				var tcId = td.attr('data-tcId');
+				var tcStatus = td.attr('data-status');
+				// 当前点击的按钮
+				var that = this; //原生js的方法
+				$.ajax({
+					type:'post',
+					url:'/api/teacher/handle',
+					data: { tc_id : tcId , tc_status : tcStatus },
+					dataType:'json',
+					success : function(data){
+						// console.log(data);
+						// 使用获取的状态值，修改页面
+						td.attr('data-status',data.result.tc_status);
+						// 修改按钮 文字
+						if(data.result.tc_status ==0){
+							$(that).html('注 销'); //$包住 转成jquery 方法
+						}else{
+							$(that).html('启 用');
+						}
+					}
+				});
+			});
 		}
 	});
 
