@@ -6,7 +6,7 @@ define(['jquery','template','util','bootstrap'],function($,template,util){
 	util.setMenu(location.pathname);
 	
 	var ret = util.qs('abc');
-	console.log(ret);
+	// console.log(ret);
 
 	//请求后台结构，获取列表数据
 	$.ajax({
