@@ -8,16 +8,17 @@ require.config({
     datepicker : 'bootstrap-datepicker/js/bootstrap-datepicker.min',
   	language : 'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
     validate: 'validate/jquery-validate.min',
-    uploadify: 'uploadify/jquery.uploadify.min',
     form: 'jquery-form/jquery.form',
+    uploadify: 'uploadify/jquery.uploadify.min',
     login:'../js/login',
-  	settings:'../js/settings',
-  	index:'../js/index',
-  	util:'../js/util',
-  	common:'../js/common',
-  	teacherlist : '../js/teacher-list',
+    region : 'jquery-region/jquery.region',
+  	ckeditor : 'ckeditor/ckeditor',
+    common:'../js/common',
+    index:'../js/index',
+    util:'../js/util',
+    teacherlist : '../js/teacher-list',
     teacheradd : '../js/teacheradd',
-  	region : 'jquery-region/jquery.region'
+    settings:'../js/settings'
   },
   //把非标准模块转换成标准模块
   shim:{  
@@ -32,6 +33,9 @@ require.config({
     },
     uploadify:{
       deps:['jquery']
+    },
+    ckeditor:{
+      exports:'CKEDITOR'
     }
 
   }
