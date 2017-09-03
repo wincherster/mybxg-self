@@ -16,7 +16,8 @@ require.config({
   	util:'../js/util',
   	common:'../js/common',
   	teacherlist : '../js/teacher-list',
-  	teacheradd : '../js/teacheradd'
+    teacheradd : '../js/teacheradd',
+  	region : 'jquery-region/jquery.region'
   },
   //把非标准模块转换成标准模块
   shim:{  

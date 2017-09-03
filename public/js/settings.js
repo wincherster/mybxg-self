@@ -1,4 +1,4 @@
-define(['jquery','template','util','datepicker','language','uploadify'],function($,template,util){
+define(['jquery','template','util','datepicker','language','uploadify','region'],function($,template,util){
 	// 设置菜单导航选中
 	util.setMenu('/main/index');
 	// 调用后台接口获取所有的个人信息
@@ -27,6 +27,10 @@ define(['jquery','template','util','datepicker','language','uploadify'],function
 					$('.preview img').attr('src',data.result.path);
 					console.log(data.result.path);
 				}
+			});
+			// 省市县三级联动
+			$('#pcd').region({
+				url:'/public/assets/jquery-region/region.json'
 			})
 		}
 	})
