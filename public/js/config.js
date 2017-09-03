@@ -20,7 +20,8 @@ require.config({
     teacherlist : '../js/teacher-list',
     teacheradd : '../js/teacheradd',
     settings:'../js/settings',
-    state:'../js/state'
+    state:'../js/state',
+    courselist:'../js/course-list'
   },
   //把非标准模块转换成标准模块
   shim:{  
