@@ -73,7 +73,6 @@ define(['jquery', 'template', 'util', 'validate', 'form'], function($, template,
 					});
 				}
 			});
-
 		}
 
 	});

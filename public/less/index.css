@@ -728,3 +728,7 @@ a:focus {
   min-height: 240px;
   padding: 15px 10px;
 }
+
+.line-two{
+  padding:0;
+}
