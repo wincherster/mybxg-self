@@ -23,6 +23,5 @@ define(['jquery'],function($){
 			});
 			return result;
 		}
-		
 	}
 });
