@@ -13,6 +13,7 @@ require.config({
     login:'../js/login',
     region : 'jquery-region/jquery.region',
     ckeditor : 'ckeditor/ckeditor',
+    jcrop : 'jcrop/js/Jcrop',
   	nprogress : 'nprogress/nprogress',
     common:'../js/common',
     index:'../js/index',
@@ -24,7 +25,8 @@ require.config({
     courselist:'../js/course-list',
     courseadd:'../js/course-add',
     coursebasic:'../js/course-basic',
-    coursepicture:'../js/course-picture'
+    coursepicture:'../js/course-picture',
+    courselesson:'../js/course-lesson'
   },
   //把非标准模块转换成标准模块
   shim:{  
@@ -42,7 +44,9 @@ require.config({
     },
     ckeditor:{
       exports:'CKEDITOR'
+    },
+    jcrop:{
+      deps:['jquery']
     }
-
   }
 });
