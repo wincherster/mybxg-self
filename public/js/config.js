@@ -3,10 +3,10 @@ require.config({
   paths:{
   	jquery:'jquery/jquery.min',
   	cookie:'jquery-cookie/jquery.cookie',
-  	template : 'artTemplate/template-web',
+    template : 'artTemplate/template-web',
     bootstrap : 'bootstrap/js/bootstrap.min',
     datepicker : 'bootstrap-datepicker/js/bootstrap-datepicker.min',
-  	language : 'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
+    language : 'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
     validate: 'validate/jquery-validate.min',
     form: 'jquery-form/jquery.form',
     uploadify: 'uploadify/jquery.uploadify.min',
@@ -14,7 +14,7 @@ require.config({
     region : 'jquery-region/jquery.region',
     ckeditor : 'ckeditor/ckeditor',
     jcrop : 'jcrop/js/Jcrop',
-  	nprogress : 'nprogress/nprogress',
+    nprogress : 'nprogress/nprogress',
     common:'../js/common',
     index:'../js/index',
     util:'../js/util',
@@ -26,7 +26,8 @@ require.config({
     courseadd:'../js/course-add',
     coursebasic:'../js/course-basic',
     coursepicture:'../js/course-picture',
-    courselesson:'../js/course-lesson'
+    courselesson:'../js/course-lesson',
+    echarts:'echarts/echarts'
   },
   //把非标准模块转换成标准模块
   shim:{  
